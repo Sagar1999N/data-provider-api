@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>Data Provider API</name>
-    <description>Provides partitioned Brazilian e-commerce data by date</description>
+    <description>Serves pre-partitioned Brazilian e-commerce data</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,13 +21,10 @@
     </parent>
 
     <properties>
-        <java.version>11</java.version>
-        <spark.version>3.4.0</spark.version>
-        <scala.version>2.12</scala.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
-        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -35,34 +32,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!-- Spark for data partitioning -->
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_${scala.version}</artifactId>
-            <version>${spark.version}</version>
-        </dependency>
-
-        <!-- HTTP Client for Kaggle download -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.14</version>
-        </dependency>
-
-        <!-- Config -->
-        <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>config</artifactId>
-            <version>1.4.2</version>
-        </dependency>
-
-        <!-- Test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
